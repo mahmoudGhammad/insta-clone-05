@@ -30,12 +30,20 @@ function Suggestions() {
                    justify-between mt-3'>
 
                    <img src={profile.avatar} alt="lol"
-                    className='w-10 h-10 rounded-full border border-red-600'
+                    className='w-10 h-10 rounded-full border
+                     border-red-600 p-[2px]'
                    />
 
-                   <div> 
-                     <h2>{profile.username}</h2>
+                   <div classname="flex-1 ml-4"> 
+                     <h2 className=' font-semibold text-sm '>
+                       {profile.username}</h2>
+
+                       <h3 className=' text-xs truncate w-40 text-gray-400 '>
+                         Works at {profile.company.name}</h3>
+
                    </div>
+                   <button className='text-blue-400 text-sm'>Follow</button>
+
                   
                   </div>
               ))
