@@ -11,9 +11,12 @@ import {MenuIcon,
 
     } from '@heroicons/react/outline'
 import { useSession , signIn , signOut} from 'next-auth/react';
+import { useRecoilState } from 'recoil';
+import { modalState } from '../atoms/modalAtom';
 
 function Header() {
     const {data:session }= useSession();
+    const [open , setOpen] = useRecoilState(modalState)
     console.log(session);
   return (
       <div className=' shadow-sm border-b bg-white sticky top-0 z-50'>
@@ -69,7 +72,8 @@ function Header() {
                 <div className=' absolute -top-1 -right-2 text-xs w-5 h-5 bg-red-500 items-center justify-center
                  animate-pulse rounded-full flex'>3</div>
           </div>
-          <PlusCircleIcon className=' hidden h-6 md:inline-flex cursor-pointer hover:scale-125 transition-all ease-out duration-150'/>
+          <PlusCircleIcon onClick={()=> setOpen(true)}
+           className=' hidden h-6 md:inline-flex cursor-pointer hover:scale-125 transition-all ease-out duration-150'/>
           <UserGroupIcon className=' hidden h-6 md:inline-flex cursor-pointer hover:scale-125 transition-all ease-out duration-150'/>
           <HeartIcon className=' hidden h-6 md:inline-flex cursor-pointer hover:scale-125 transition-all ease-out duration-150'/>
 

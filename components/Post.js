@@ -1,14 +1,37 @@
-import React from 'react';
 import {
+    addDoc,
+    collection,
+    deleteDoc,
+    doc,
+    onSnapshot,
+    orderBy,
+    query,
+    serverTimestamp,
+    setDoc,
+    updateDoc,
+  } from "@firebase/firestore";
+  import {
     BookmarkIcon,
     ChatIcon,
     DotsHorizontalIcon,
     EmojiHappyIcon,
     HeartIcon,
     PaperAirplaneIcon,
-} from '@heroicons/react/outline'
-
-function Post({img , username , userImg , caption , }) {
+  } from "@heroicons/react/outline";
+  import { HeartIcon as HeartIconFilled } from "@heroicons/react/solid";
+  import { useSession } from "next-auth/react";
+  import { useEffect, useRef, useState } from "react";
+  import Moment from "react-moment";
+  import { db } from "../firebase";
+  
+  function Post({ id, username, userImg, img, caption }) {
+  
+  
+    const { data: session } = useSession();
+  
+   
+  
+ 
   return (
   <div className=' bg-white my-7 '>
       <div className=' flex items-center p-5'>
