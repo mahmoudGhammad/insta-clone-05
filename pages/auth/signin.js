@@ -9,8 +9,7 @@ export default function SignIn({ providers }) {
 
     <div className="flex flex-col items-center justify-center min-h-screen py-2 -mt-50 px-14 text-center ">
     <div >
-        <Image src="https://links.papareact.com/ocw" className=" w-80">
-        </Image>
+        <img className="w-80" src="https://links.papareact.com/ocw" alt="" />
         <p className=" w-80 text-xs italic -px-100">This is not a real app it's an app built by me <span className=" text-sm text-red-900">'Mahmoud Hammad'</span> for educational Purpose</p>
 
       </div>
