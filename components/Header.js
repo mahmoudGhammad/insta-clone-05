@@ -37,6 +37,7 @@ function Header() {
          <div className='relative w-10  lg:hidden cursor-pointer '>
 
           <Image
+          alt=''
                 src='https://links.papareact.com/jjm'
                 layout='fill' 
                 objectFit='contain'
