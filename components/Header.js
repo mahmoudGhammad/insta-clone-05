@@ -27,6 +27,7 @@ function Header() {
           <Image
                 
                 src='https://links.papareact.com/ocw'
+                alt=''
                 layout='fill' 
                 objectFit='contain'
           />

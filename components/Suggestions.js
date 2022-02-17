@@ -34,7 +34,7 @@ function Suggestions() {
                      border-red-600 p-[2px]'
                    />
 
-                   <div classname="flex-1 ml-4"> 
+                   <div className="flex-1 ml-4"> 
                      <h2 className=' font-semibold text-sm '>
                        {profile.username}</h2>
 
