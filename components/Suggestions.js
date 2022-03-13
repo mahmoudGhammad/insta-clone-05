@@ -29,9 +29,10 @@ function Suggestions() {
                   <div key={profile.id} className=' flex items-center
                    justify-between mt-3'>
 
-                   <img src={profile.avatar} alt="lol"
-                    className='w-10 h-10 rounded-full border
+                   <img  className='w-10 h-10 rounded-full border
                      border-red-600 p-[2px]'
+                    src={profile.avatar} alt="lol"
+                   
                    />
 
                    <div className="flex-1 ml-4"> 
